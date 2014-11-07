@@ -5,6 +5,6 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 require 'rdiscount'
 
 # Processor
-Pakyow::App.processor(:md, :mdown, :markdown) { |content|
+Pakyow::App.processor(:md, :mdown, :markdown) do |content|
   RDiscount.new(content).to_html
-}
+end
