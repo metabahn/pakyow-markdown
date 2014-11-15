@@ -6,9 +6,13 @@ class ProcessorTest < MiniTest::Unit::TestCase
     Pakyow::App.stage(:test)
   end
 
-  def test_view_is_processed
-    v = View.at_path("/", @view_store)
-    assert_equal "<h1>this should be a header</h1>", v.container(:main)[0].content
-    assert_equal "<p><em>em</em></p>", v.container(:sub)[0].content
+  def test_md_view_is_processed
+    v = Pakyow.app.presenter.store.composer('/')
+    assert_equal "<h1>this should be a header</h1>", v.container(:default).to_html.strip
+  end
+
+  def test_markdown_view_is_processed
+    v = Pakyow.app.presenter.store.composer('/sub')
+    assert_equal "<p><em>em</em></p>", v.container(:default).to_html.strip
   end
 end

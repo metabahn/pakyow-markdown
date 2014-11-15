@@ -1,0 +1,32 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mini_portile (0.6.1)
+    minitest (5.4.3)
+    minitest-focus (1.1.0)
+      minitest (>= 4, < 6)
+    nokogiri (1.6.4.1)
+      mini_portile (~> 0.6.0)
+    pakyow-core (0.9.0)
+      pakyow-support (= 0.9.0)
+      rack (~> 1.5)
+    pakyow-presenter (0.9.0)
+      nokogiri (~> 1.6)
+      pakyow-core (= 0.9.0)
+      pakyow-support (= 0.9.0)
+    pakyow-support (0.9.0)
+    rack (1.5.2)
+    rake (10.3.2)
+    rdiscount (2.1.7.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  minitest-focus
+  pakyow-core (= 0.9)
+  pakyow-presenter (= 0.9)
+  pakyow-support (= 0.9)
+  rake
+  rdiscount (~> 2.1)
