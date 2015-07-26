@@ -26,5 +26,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency('pakyow-core', '~> 0.9')
   s.add_dependency('pakyow-presenter', '~> 0.9')
-  s.add_dependency('rdiscount', '~> 2.1')
+  s.add_dependency('redcarpet', '~> 3.3')
+  s.add_dependency('rouge', '~> 1.9')
 end
