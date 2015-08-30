@@ -3,8 +3,18 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 
 require 'redcarpet'
 
+# Runs a block of code without warnings.
+# http://stackoverflow.com/questions/9236264/how-to-disable-warning-for-redefining-a-constant-when-loading-a-file
+def silence_warnings(&block)
+  warn_level = $VERBOSE
+  $VERBOSE = nil
+  result = block.call
+  $VERBOSE = warn_level
+  result
+end
+
 # silences the annoying redefined constant warnings
-Kernel.silence_warnings do
+silence_warnings do
   require 'rouge'
 end
 

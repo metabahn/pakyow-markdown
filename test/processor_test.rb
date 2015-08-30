@@ -1,6 +1,6 @@
 require "support/helper"
 
-class ProcessorTest < MiniTest::Unit::TestCase
+class ProcessorTest < MiniTest::Test
   def setup
     @view_store = :test
     Pakyow::App.stage(:test)

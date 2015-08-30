@@ -24,8 +24,13 @@ Gem::Specification.new do |s|
 
   s.require_path = File.join(presenter_path, 'lib')
 
+  s.add_dependency('pakyow-support', '~> 0.9')
   s.add_dependency('pakyow-core', '~> 0.9')
   s.add_dependency('pakyow-presenter', '~> 0.9')
   s.add_dependency('redcarpet', '~> 3.3')
   s.add_dependency('rouge', '~> 1.9')
+
+  s.add_development_dependency('rake', '~> 10.4')
+  s.add_development_dependency('minitest', '~> 5.8')
+  s.add_development_dependency('minitest-focus', '~> 1.1')
 end
