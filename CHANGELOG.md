@@ -1,4 +1,4 @@
-# 1.0.0
+# 1.0.0 / 2015-10-18
 
   * Move from Rdiscount to Redcarpet
   * Configure Redcarpet for autolink, footnotes, and fenced code blocks
