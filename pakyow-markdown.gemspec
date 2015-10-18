@@ -1,36 +1,25 @@
-GEM_NAME = 'pakyow-markdown'
+require File.expand_path('../lib/version', __FILE__)
 
-version = File.read(File.join(File.expand_path("../VERSION", __FILE__))).strip
-presenter_path = File.exists?(GEM_NAME) ? GEM_NAME : '.'
+Gem::Specification.new do |spec|
+  spec.name          = 'pakyow-markdown'
+  spec.summary       = 'Pakyow Markdown'
+  spec.description   = 'Markdown support for Pakyow views'
+  spec.author        = 'Bryan Powell'
+  spec.email         = 'bryan@metabahn.com'
+  spec.homepage      = 'http://pakyow.org'
+  spec.version       = Pakyow::Markdown::VERSION
+  spec.require_path  = 'lib'
+  spec.files         = `git ls-files`.split("\n")
+  spec.license       = 'MIT'
 
-Gem::Specification.new do |s|
-  s.platform    = Gem::Platform::RUBY
-  s.name        = GEM_NAME
-  s.version     = version
-  s.summary     = 'Pakyow view processor for markdown.'
-  s.description = 'A view processor for Pakyow that automatically converts Markdown views with .md or .markdown extensions to HTML.'
-  s.required_ruby_version = '>= 2.0.0'
+  spec.add_dependency('pakyow-support', '~> 0')
+  spec.add_dependency('pakyow-core', '~> 0')
+  spec.add_dependency('pakyow-presenter', '~> 0')
 
-  s.authors           = ['Bryan Powell']
-  s.email             = 'bryan@metabahn.com'
-  s.homepage          = 'http://pakyow.com'
+  spec.add_dependency('redcarpet', '~> 3.3')
+  spec.add_dependency('rouge', '~> 1.10')
 
-  s.files        = Dir[
-                        File.join(presenter_path, 'CHANGES'),
-                        File.join(presenter_path, 'README'),
-                        File.join(presenter_path, 'MIT-LICENSE'),
-                        File.join(presenter_path, 'lib','**','*')
-                      ]
-
-  s.require_path = File.join(presenter_path, 'lib')
-
-  s.add_dependency('pakyow-support', '~> 0.9')
-  s.add_dependency('pakyow-core', '~> 0.9')
-  s.add_dependency('pakyow-presenter', '~> 0.9')
-  s.add_dependency('redcarpet', '~> 3.3')
-  s.add_dependency('rouge', '~> 1.9')
-
-  s.add_development_dependency('rake', '~> 10.4')
-  s.add_development_dependency('minitest', '~> 5.8')
-  s.add_development_dependency('minitest-focus', '~> 1.1')
+  spec.add_development_dependency('rake', '~> 10.4')
+  spec.add_development_dependency('minitest', '~> 5.8')
+  spec.add_development_dependency('minitest-focus', '~> 1.1')
 end

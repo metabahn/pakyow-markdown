@@ -1,10 +1,11 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'pakyow-support', '~> 0.9'
-gem 'pakyow-core', '~> 0.9'
-gem 'pakyow-presenter', '~> 0.9'
+gem 'pakyow-support'
+gem 'pakyow-core'
+gem 'pakyow-presenter'
+
 gem 'redcarpet', '~> 3.3'
-gem 'rouge', '~> 1.9'
+gem 'rouge', '~> 1.10'
 
 group :test do
   gem 'rake'
