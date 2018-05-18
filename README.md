@@ -1,5 +1,7 @@
-pakyow-markdown is a Ruby Gem that adds a Markdown view processor to a Pakyow app.
+# pakyow/markdown
 
-# Usage
+Markdown support for [pakyow/presenter](https://github.com/pakyow/pakyow/tree/master/pakyow-presenter).
 
-Add `pakyow-markdown` to your Gemfile. Now any view file with an `md`, `mdown`, or `markdown` extension will be processed to HTML automatically.
+## Usage
+
+Add `pakyow-markdown` to your `Gemfile`. Any frontend view template with a `md`, `mdown`, or `markdown` extension will be processed automatically.
