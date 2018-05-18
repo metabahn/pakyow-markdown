@@ -4,4 +4,4 @@ Markdown support for [pakyow/presenter](https://github.com/pakyow/pakyow/tree/ma
 
 ## Usage
 
-Add `pakyow-markdown` to your `Gemfile`. Any frontend view template with a `md`, `mdown`, or `markdown` extension will be processed automatically.
+Add `pakyow-markdown` to your `Gemfile`. Any view template with a `md`, `mdown`, or `markdown` file extension will be processed during presentation and rendered as HTML.
