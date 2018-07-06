@@ -16,7 +16,8 @@ module Pakyow
             setting :extensions, {
               autolink: true,
               footnotes: true,
-              fenced_code_blocks: true
+              fenced_code_blocks: true,
+              tables: true
             }
           end
         end
