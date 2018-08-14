@@ -5,7 +5,7 @@ require "redcarpet"
 require "rouge"
 require "rouge/plugins/redcarpet"
 
-require "pakyow/core/framework"
+require "pakyow/framework"
 
 module Pakyow
   module Markdown
