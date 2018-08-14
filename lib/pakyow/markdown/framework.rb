@@ -12,7 +12,7 @@ module Pakyow
     class Framework < Pakyow::Framework(:markdown)
       def boot
         app.class_eval do
-          settings_for :markdown do
+          configurable :markdown do
             setting :extensions, {
               autolink: true,
               footnotes: true,
