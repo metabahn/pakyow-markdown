@@ -11,7 +11,7 @@ module Pakyow
   module Markdown
     class Framework < Pakyow::Framework(:markdown)
       def boot
-        app.class_eval do
+        object.class_eval do
           configurable :markdown do
             setting :extensions, {
               autolink: true,
@@ -22,9 +22,9 @@ module Pakyow
           end
         end
 
-        app.processor :md, :mdown, :markdown do |content|
+        object.processor :md, :mdown, :markdown do |content|
           Redcarpet::Markdown.new(
-            Renderer, app.config.markdown.extensions
+            Renderer, object.config.markdown.extensions
           ).render(content)
         end
       end
