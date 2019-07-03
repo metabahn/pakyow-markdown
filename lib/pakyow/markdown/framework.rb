@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-require "redcarpet"
-
-require "rouge"
-require "rouge/plugins/redcarpet"
-
 require "pakyow/framework"
+
+require "pakyow/markdown/processor"
 
 module Pakyow
   module Markdown
@@ -22,23 +19,7 @@ module Pakyow
           end
         end
 
-        object.processor :md, :mdown, :markdown do |content|
-          Redcarpet::Markdown.new(
-            Renderer, object.config.markdown.extensions
-          ).render(content)
-        end
-      end
-    end
-
-    class Renderer < Redcarpet::Render::HTML
-      include Rouge::Plugins::Redcarpet
-
-      def block_quote(quote)
-        if match = quote.match(/<p>\[(.*)\]/)
-          %(<blockquote class="#{match[1]}">#{quote.gsub("[#{match[1]}]", "")}</blockquote>)
-        else
-          super
-        end
+        object.state(:processor) << Pakyow::Markdown::Processer
       end
     end
   end
