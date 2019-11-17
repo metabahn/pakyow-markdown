@@ -1,4 +1,4 @@
-# v1.0.1 (unreleased)
+# v2.0.1
 
   * `fix` **Allow minor version bumps for `pakyow/presenter`.**
 
@@ -7,6 +7,6 @@
 
 [pr-4]: https://github.com/pakyow/markdown/pull/4
 
-# v1.0.0
+# v2.0.0
 
   * Hello, Web
