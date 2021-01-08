@@ -21,6 +21,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "pakyow-presenter", "< 3"
 
-  spec.add_dependency "redcarpet", "~> 3.4"
-  spec.add_dependency "rouge", "~> 3.5"
+  spec.add_dependency "redcarpet", "~> 3.5"
+  spec.add_dependency "rouge", "~> 3.26"
 end
