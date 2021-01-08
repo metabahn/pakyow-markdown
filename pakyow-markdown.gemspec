@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files        = Dir["CHANGELOG.md", "README.md", "LICENSE", "lib/**/*"]
   spec.require_path = "lib"
 
-  spec.add_dependency "pakyow-presenter", "~> 1.0"
+  spec.add_dependency "pakyow-presenter", "< 3"
 
   spec.add_dependency "redcarpet", "~> 3.4"
   spec.add_dependency "rouge", "~> 3.5"
